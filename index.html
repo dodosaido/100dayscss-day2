@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <title>!Day 2</title>
+   <link rel="stylesheet" href="style.css" class="css">
+</head>
+
+<body>
+   <div class="box">
+      <div class="menu-icon">
+         <div class="line-1 no-animation"></div>
+         <div class="line-2 no-animation"></div>
+         <div class="line-3 no-animation"></div>
+      </div>
+   </div>
+
+   <footer>
+      <p>&copy;<a href="https://dodosaido.github.io/me/">@DodoSaido</a></p>
+   </footer>
+
+   <script>
+      const button = document.querySelector(".menu-icon");
+
+      button.addEventListener("click", () => {
+         button.classList.toggle('active');
+
+         for (let i = 0; i < 3; i++) {
+            button.querySelectorAll('div')[i].classList.remove('no-animation')
+         }
+      });
+
+   </script>
+</body>
+
+</html>
